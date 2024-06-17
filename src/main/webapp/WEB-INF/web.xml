@@ -49,4 +49,14 @@
     <servlet-name>Hoteles</servlet-name>
     <url-pattern>/Hoteles</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Ofertas</display-name>
+    <servlet-name>Ofertas</servlet-name>
+    <servlet-class>servlet.Ofertas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ofertas</servlet-name>
+    <url-pattern>/Ofertas</url-pattern>
+  </servlet-mapping>
 </web-app>
