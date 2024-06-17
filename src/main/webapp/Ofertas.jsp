@@ -115,11 +115,13 @@
     </main>
     <section>
         <h2>Deja Tus Datos ¡TE CONTACTAREMOS!</h2>
-            <form>
+             <form method = "post" action="Ofertas">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <label for="telefono">Numero de Contacto:</label>
+                <input type="tel" id="telefono" name="telefono" required maxlength="15">
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" required></textarea>
                 <button type="submit">Enviar</button>
