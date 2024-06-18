@@ -39,4 +39,14 @@
     <servlet-name>Register</servlet-name>
     <url-pattern>/register</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>D_inicioServlet</display-name>
+    <servlet-name>D_inicioServlet</servlet-name>
+    <servlet-class>Inicio.D_inicioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>D_inicioServlet</servlet-name>
+    <url-pattern>/D_inicio</url-pattern>
+  </servlet-mapping>
 </web-app>
