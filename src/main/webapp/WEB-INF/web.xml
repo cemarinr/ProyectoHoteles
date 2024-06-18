@@ -59,4 +59,14 @@
     <servlet-name>Ofertas</servlet-name>
     <url-pattern>/Ofertas</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Inicio</display-name>
+    <servlet-name>Inicio</servlet-name>
+    <servlet-class>servlet.Inicio</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Inicio</servlet-name>
+    <url-pattern>/inicio</url-pattern>
+  </servlet-mapping>
 </web-app>

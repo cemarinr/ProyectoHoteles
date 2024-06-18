@@ -22,7 +22,7 @@ public class Login extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login").forward(request, response);
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
            response.sendRedirect("/reservaciones");
         } else {
             request.setAttribute("error", "<font color=red>Invalid username or password</font>");
-            request.getRequestDispatcher("/login").forward(request, response);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
     }
 }

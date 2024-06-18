@@ -15,7 +15,7 @@ body{
     margin: 0 auto;
 }
 .header {
-        background-image: linear-gradient(rgba(38, 35, 35, 0.7),rgba(58, 50, 50, 0.7)),url(imagenes/playa.jpg);
+        background-image: linear-gradient(rgba(38, 35, 35, 0.7),rgba(58, 50, 50, 0.7)),url(../images/playa.jpg);
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
