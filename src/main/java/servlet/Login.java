@@ -22,7 +22,7 @@ public class Login extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login").forward(request, response);
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,10 +33,10 @@ public class Login extends HttpServlet {
            Cookie sessionCookie = new Cookie("sessionUser", username);
            sessionCookie.setMaxAge(30 * 60); 
            response.addCookie(sessionCookie); 
-           response.sendRedirect("/reservaciones");
+           request.getRequestDispatcher("/reservaciones").forward(request, response);
         } else {
             request.setAttribute("error", "<font color=red>Invalid username or password</font>");
-            request.getRequestDispatcher("/login").forward(request, response);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         }
     }
 }

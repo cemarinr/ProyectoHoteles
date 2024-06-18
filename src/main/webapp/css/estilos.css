@@ -1,55 +1,296 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
 body {
-    font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/playa.jpg);
+  background-size: cover;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 80px;
+  width: auto;
+  margin: 10px;
+}
+.menu #navbar ul {
+  display: flex;
+}
+.menu #navbar ul li {
+  position: relative;
+}
+.menu #navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: #fffdfc;
+  display: block;
+  font-weight: 600;
+}
+.menu #navbar ul li a:hover {
+  color: aqua;
+}
+.menu-icono {
+  width: 25px;
+}
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+.h_contenedor-header-hotel {
+  text-align: center;
+  width: 100%;
+}
+.h_contenedor-header-hotel h1 {
+  font-size: 50px;
+  line-height: 80px;
+  color: aliceblue;
+  margin-bottom: 35px;
+  margin-top: 6%;
+}
+.h_contenedor-header-hotel p {
+  font-size: 25px;
+  color: #fffdfc;
+  padding: 0 250px;
+}
+.h_contenido-hoteles {
+  margin: 3%;
+  display: flex;
+}
+.h_seccion-variable-hoteles {
+  border: 1px solid #ffffff;
+  display: flex;
+  width: 100%;
+}
+.h_seccion-variable-hoteles:hover {
+  border: 1px solid #007bff;
+}
+.h_imagen-contenido-hoteles {
+  height: 150px;
+  width: 150px;
+}
+.h_ubicacion-contenido-hoteles {
+  margin-bottom: 20px;
+}
+.h_div-descripcion-contenido-hoteles {
+  padding-left: 2%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.h_h4-contenido-hoteles {
+  margin-top: 10%;
+}
+.h_puntacion-hoteles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #003b95;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+.h_div-puntuacion-contenido-hoteles {
+  display: inline;
+  justify-items: end;
+  align-items: center;
+}
+.h_precio-contenido-hoteles {
+  margin-top: 10%;
+  font-size: 20px;
+  min-width: 125px;
+  font-weight: bold;
+}
+.h_hoteles-bogota {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 75%;
 }
 
+#content {
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+#h_cuerpo-contenido-hotel {
+  display: flex;
+}
+#h_sidebar {
+  order: -1;
+  max-width: 25%;
+  margin-right: 20px;
+}
+
+#h_div-mapa-hoteles {
+  display: grid;
+  justify-content: center;
+}
+#h_checkbox-recomendados {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+#h_checkbox-recomendados {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#h_checkbox-recomendados {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+#h_checkbox-recomendados {
+  background-color: #000;
+  color: #fff;
+}
+footer {
+  background-image: linear-gradient(rgba(32, 30, 30, 0.7), rgba(58, 50, 50, 0.7)), url(images/playa.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+section {
+  padding: 20px;
+  border: 1px solid #007bff;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+select {
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el formulario del buscador de hoteles */
 .h_buscador-hoteles {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .h_formulario {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }
 
 .h_grupo {
-    flex: 1;
-    margin: 10px;
-    min-width: 150px;
+  flex: 1;
+  margin: 10px;
+  min-width: 150px;
 }
 
 .h_grupo label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.h_grupo input,
+.h_grupo input[type="text"],
+.h_grupo input[type="date"],
 .h_grupo select {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
-.h_grupo button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.h_contador {
+  display: flex;
+  align-items: center;
 }
 
-.h_grupo button:hover {
-    background-color: #0056b3;
+.h_contador button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.h_contador button:hover {
+  background-color: #e0e0e0;
+}
+
+.h_contador input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
+  cursor: default;
+}
+
+.h_grupo button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h_grupo button[type="submit"]:hover {
+  background-color: #0056b3;
 }
