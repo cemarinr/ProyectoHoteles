@@ -1,0 +1,447 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.h_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#h_header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/playa.jpg);
+  background-size: cover;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.h_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.h_logo {
+  height: 80px;
+  width: auto;
+  margin: 10px;
+}
+
+#h_navbar ul {
+  display: flex;
+}
+
+#h_navbar ul li {
+  position: relative;
+}
+
+#h_navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: #fffdfc;
+  display: block;
+  font-weight: 600;
+}
+
+#h_navbar ul li a:hover {
+  color: aqua;
+}
+
+.h_menu-icono {
+  width: 25px;
+}
+
+.h_menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.h_contenedor-header-hotel {
+  text-align: center;
+  width: 100%;
+}
+
+.h_contenedor-header-hotel h1 {
+  font-size: 50px;
+  line-height: 80px;
+  color: aliceblue;
+  margin-bottom: 35px;
+  margin-top: 6%;
+}
+
+.h_contenedor-header-hotel p {
+  font-size: 25px;
+  color: #fffdfc;
+  padding: 0 250px;
+}
+
+.h_contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.h_buscador-hoteles {
+  width: 100%vh;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  border-color: #0056b3;
+  border-width: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.h_buscador-hoteles button {
+  align-content: center;
+}
+
+.h_formulario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.h_formulario ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.h_formulario li {
+  flex: 1;
+  list-style: none;
+  margin: 10px;
+}
+
+.h_grupo {
+  flex: 1 1 200px;
+  margin: 10px;
+  margin-top: auto;
+}
+
+.h_grupo label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.h_grupo input[type="text"],
+.h_grupo input[type="date"],
+.h_grupo input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: #007bff;
+  border-width: 4px;
+  transition: background-color 0.3s;
+}
+
+.h_grupo input[type="text"]:hover,
+.h_grupo input[type="date"]:hover,
+.h_grupo input[type="number"]:hover {
+  background-color: #e0e0e0;
+}
+
+.h_grupo button {
+  width: 100%;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h_grupo button:hover {
+  background-color: #0056b3;
+}
+
+.h_huespedes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.h_huespedes-contenedor {
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#h_huespedes-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#h_huespedes-lista {
+  display: none;
+  list-style: none;
+  border-top: 1px solid #ddd;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0px 1px 8px 3px rgb(10 10 10 / 85%);
+}
+
+.h_huespedes:hover #h_huespedes-lista {
+  display: block;
+}
+
+.h_huespedes-contenedor label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.h_huespedes-contenedor input[type="number"] {
+  width: 50px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.h_huespedes-contenedor li:hover {
+  background-color: #e0e0e0;
+}
+
+.h_contenido-principal {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#h_sidebar {
+  flex: 0 0 25%;
+  margin-right: 20px;
+}
+
+.h_contenido-hoteles {
+  flex: 1;
+}
+
+.h_seccion-variable-hoteles {
+  border: 1px solid #ffffff;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.h_seccion-variable-hoteles:hover {
+  border: 1px solid #007bff;
+}
+
+.h_imagen-contenido-hoteles {
+  height: 150px;
+  width: 150px;
+}
+
+.h_ubicacion-contenido-hoteles {
+  margin-bottom: 20px;
+}
+
+.h_div-descripcion-contenido-hoteles {
+  padding-left: 2%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.h_h4-contenido-hoteles {
+  margin-top: 10%;
+}
+
+.h_puntacion-hoteles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #003b95;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+
+.h_div-puntuacion-contenido-hoteles {
+  display: inline;
+  justify-items: end;
+  align-items: center;
+}
+
+.h_precio-contenido-hoteles {
+  margin-top: 10%;
+  font-size: 20px;
+  min-width: 125px;
+  font-weight: bold;
+}
+
+.h_hoteles-bogota {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+}
+
+footer {
+  background-image: linear-gradient(rgba(32, 30, 30, 0.7), rgba(58, 50, 50, 0.7)), url(images/playa.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+  border: 1px solid #007bff;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+select {
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+#imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.h_hoteles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Ajusta el minmax para evitar el desbordamiento */
+  gap: 50px; /* Espacio entre los elementos */
+  justify-items: center;
+  align-items: start;
+}
+
+.h_seccion-variable-hoteles {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+    max-width: 450px;
+  margin: auto; 
+}
+
+.h_imagen-contenido-hoteles {
+  height: 150px;
+  width: 150px;
+}
+
+.h_div-descripcion-contenido-hoteles {
+  padding-left: 2%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.h_h4-contenido-hoteles {
+  margin-top: 10%;
+}
+
+.h_puntacion-hoteles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #003b95;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+
+.h_div-puntuacion-contenido-hoteles {
+  display: inline;
+  justify-items: end;
+  align-items: center;
+}
+
+.h_precio-contenido-hoteles {
+  margin-top: 10%;
+  font-size: 20px;
+  min-width: 125px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .h_hoteles {
+    grid-template-columns: 1fr;
+  }
+}
+
+.r_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.r_table, .r_th, .r_td {
+    border: 1px solid black;
+}
+
+.r_th, .r_td {
+    padding: 8px;
+    text-align: left;
+}
+
+.r_th {
+    background-color: #f2f2f2;
+}
+
+

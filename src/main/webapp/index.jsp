@@ -29,9 +29,8 @@
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="https://edisonfr.github.io/Primer-parcial/"> Paquetes</a></li> <!--link para acceder a la pagina de edison  -->
-                    <li><a href="https://cemarinr.github.io/parcial1/nav/hoteles.html"> Hoteles</a></li> <!--link para acceder a la pagina de carlos -->
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="/ProyectoHoteles/Ofertas"> Paquetes</a></li> <!--link para acceder a la pagina de edison  -->
+                    <li><a href="/ProyectoHoteles/Hoteles"> Hoteles</a></li> <!--link para acceder a la pagina de carlos -->
                     <li class="dropdown">
                     <a href="#Aliados">Nuestros Aliados</a>
                         <div class="dropdown-content">

@@ -35,10 +35,10 @@ public class Register extends HttpServlet {
 
 	        if (success) {
 	            request.setAttribute("success", "Registro exitoso. Ahora puedes iniciar sesión.");
-	            request.getRequestDispatcher("login.jsp").forward(request, response);
+	            request.getRequestDispatcher("/login.jsp").forward(request, response);
 	        } else {
 	            request.setAttribute("error", "Error en el registro. Por favor, intenta nuevamente.");
 	        }
-	        request.getRequestDispatcher("register.jsp").forward(request, response);
+	        request.getRequestDispatcher("/register.jsp").forward(request, response);
 	    }
 	}

@@ -23,7 +23,7 @@ public class UserAuthManager implements UserAuthManagerLocal {
         boolean esValido = false;
         try {
             Connection connection = Conexion.getConnection();
-            String query = "SELECT password_hash FROM usuario_test WHERE email = ?";
+            String query = "SELECT password_hash FROM usuarios WHERE email = ?";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, username);
             ResultSet resultSet = statement.executeQuery();
@@ -47,18 +47,18 @@ public class UserAuthManager implements UserAuthManagerLocal {
     	boolean usuarioRegistrado = false;
     	try {
             Connection connection = Conexion.getConnection();
-            /*String query = "INSERT INTO usuarios (nombre, email, telefono, password_hash) VALUES (?, ?, ?, ?)";
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, nombre);
-            statement.setString(2, email);
-            statement.setString(3, telefono);
-            statement.setString(4, hashPassword(password));*/
-            String query = "INSERT INTO usuario_test (nombre, email, telefono, password_hash) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO usuarios (nombre, email, telefono, password_hash) VALUES (?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, nombre);
             statement.setString(2, email);
             statement.setString(3, telefono);
             statement.setString(4, hashPassword(password));
+            /*String query = "INSERT INTO usuario_test (nombre, email, telefono, password_hash) VALUES (?, ?, ?, ?)";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, nombre);
+            statement.setString(2, email);
+            statement.setString(3, telefono);
+            statement.setString(4, hashPassword(password));*/
             
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {

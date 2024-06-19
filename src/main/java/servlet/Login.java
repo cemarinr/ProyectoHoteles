@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
            Cookie sessionCookie = new Cookie("sessionUser", username);
            sessionCookie.setMaxAge(30 * 60); 
            response.addCookie(sessionCookie); 
-           request.getRequestDispatcher("/reservaciones").forward(request, response);
+           request.getRequestDispatcher("/Reservaciones").forward(request, response);
         } else {
             request.setAttribute("error", "<font color=red>Invalid username or password</font>");
             request.getRequestDispatcher("/login.jsp").forward(request, response);

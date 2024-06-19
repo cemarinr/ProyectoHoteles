@@ -16,8 +16,8 @@
     <header>
         <nav> 
             <ul>
-                <li><a href="https://dnaranjop.github.io/Primer-parcial/">Incio</a></li>
-                <li><a href="https://cemarinr.github.io/parcial1/nav/hoteles.html">Hoteles</a></li>
+                <li><a href="/ProyectoHoteles/inicio">Incio</a></li>
+                <li><a href="/ProyectoHoteles/Hoteles">Hoteles</a></li>
                 <li><a href="#destinos">Destinos</a></li>
                 <li><a href="#ofertas">Ofertas</a></li>
                 <li><a href="#HOT SALE">Hot Sale</a></li>
